@@ -1,0 +1,13 @@
+#!/bin/bash
+
+current_year = 2023
+
+year_char = input('How old are you?':  )
+
+year = int(year_char)
+
+output_year = int(current_year + year)
+
+print(f'in 2050, you will be {output_year}'s old')
+
+
