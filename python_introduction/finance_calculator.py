@@ -1,23 +1,13 @@
 #!/usr/bin/env python3
 
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
 
-interest_rate = 0.05
+monthly_savings = monthly_income - monthly_expenses
 
-try:
-    income = float(input("Enter your monthly income: "))
-    expenses = float(input("Enter your total monthly expenses: "))
+projected_savings = monthly_savings * 12 + (monthly_savings * 12 * 0.05)
 
-   
-    monthly_savings = income - expenses
 
-    
-    annual_savings = monthly_savings * 12
-    projected_savings = annual_savings + (annual_savings * interest_rate)
-
-  
-    print(f"Your monthly savings are: ${monthly_savings:.2f}")
-    print(f"Projected savings after one year, with interest, is: ${projected_savings:.2f}")
-
-except ValueError:
-    print("Please enter valid numerical values for income and expenses.")
+print(f"Your monthly savings are ${monthly_savings:.2f}")
+print(f"Projected savings after one year, with interest, is: ${projected_savings:.2f}")
 
