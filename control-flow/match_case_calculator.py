@@ -7,7 +7,7 @@ num1 = int(num1)
 num2 = int(num2)
 
 
-operation = input("Choose the operation (+, -, *, /): .")
+operation = input("Choose the operation (+, -, *, /): ")
 
 match operation:
     case "+":
