@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env python3
 
 
 weather_input = input("What's the weather like today? (sunny/rainy/cold): ")
