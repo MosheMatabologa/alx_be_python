@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 
-
+# Global Conversion Factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # Explicitly defined as 9/5
 
+# Function to convert Fahrenheit to Celsius
 def convert_to_celsius(fahrenheit):
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
+# Function to convert Celsius to Fahrenheit
 def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-
+# Main function for user interaction
 def main():
     try:
         # Prompt user for temperature
@@ -32,6 +34,7 @@ def main():
     except ValueError as e:
         print(f"Error: {e}")
 
+# Run the script
 if __name__ == "__main__":
     main()
 
