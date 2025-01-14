@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#!/usr/bin/env python3
 
 # Global Conversion Factors
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
@@ -18,13 +17,9 @@ def convert_to_fahrenheit(celsius):
 def main():
     try:
         # Prompt the user to enter a temperature
-        temp_input = input("Enter the temperature to convert: ")
-        
-        # Validate that the input is numeric
-        if not temp_input.replace('.', '', 1).isdigit():
-            raise ValueError("Invalid temperature. Please enter a numeric value.")
+        temp_input = input("Enter the temperature to convert: ").strip()
 
-        # Convert the input to a float
+        # Validate and convert input to float
         temperature = float(temp_input)
 
         # Ask for the unit of the temperature
@@ -33,14 +28,14 @@ def main():
         # Perform the appropriate conversion
         if unit == 'F':
             converted_temp = convert_to_celsius(temperature)
-            print(f"{temperature}°F is {converted_temp:.2f}°C")
+            print(f"{temperature:.2f}°F is {converted_temp:.2f}°C")
         elif unit == 'C':
             converted_temp = convert_to_fahrenheit(temperature)
-            print(f"{temperature}°C is {converted_temp:.2f}°F")
+            print(f"{temperature:.2f}°C is {converted_temp:.2f}°F")
         else:
-            print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
+            raise ValueError("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
     except ValueError as e:
-        print(e)
+        print(f"Error: {e}")
 
 if __name__ == "__main__":
     main()
