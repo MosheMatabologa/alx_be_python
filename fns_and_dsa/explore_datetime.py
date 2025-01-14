@@ -1,25 +1,30 @@
 #!/usr/bin/env python3
-import datetime
+from datetime import datetime, timedelta
 
 def display_current_datetime():
-   
-    current_date = datetime.datetime.now() 
-    formatted_current_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
-    print(f"Current date and time: {formatted_current_date}")
-    return current_date  # Return the current_date object for further use
-    
-def calculate_future_date(current_date):
+    """
+    Displays the current date and time in the format 'YYYY-MM-DD HH:MM:SS'.
+    """
+    current_date = datetime.now()
+    print(f"Current date and time: {current_date.strftime('%Y-%m-%d %H:%M:%S')}")
+    return current_date
+
+def calculate_future_date():
+    """
+    Prompts the user for a number of days and calculates the future date.
+    """
     try:
+        # Prompt for number of days as integer
         number_of_days = int(input("Enter the number of days to add to the current date: "))
-        future_date = current_date + datetime.timedelta(days=number_of_days)
-        formatted_future_date = future_date.strftime("%Y-%m-%d")
-        print(f"Future date: {formatted_future_date}")
+        # Calculate future date
+        future_date = datetime.now() + timedelta(days=number_of_days)
+        print(f"Future date: {future_date.strftime('%Y-%m-%d')}")
     except ValueError:
         print("Invalid input! Please enter an integer value for the number of days.")
 
 if __name__ == "__main__":
-  
-    current_date = display_current_datetime()
-    
-    calculate_future_date(current_date)
+    # Part 1: Display current date and time
+    display_current_datetime()
 
+    # Part 2: Calculate and display future date
+    calculate_future_date()
