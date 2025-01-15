@@ -33,16 +33,15 @@ class BankAccount:
         return f"Withdrew: ${amount:.2f}"
     
 if __name__ == "__main__":
-    # Create an account with an initial balance of 1000
-    my_account = BankAccount(initial_balance=1000)
+    # Create an account with an initial balance of 500
+    my_account = BankAccount(initial_balance=500)
     
-    # Deposit 0 into the account
+    # Deposit 0 into the account (no change)
     my_account.deposit(0)
     
-    # Attempt to withdraw 50
-    result = my_account.withdraw(50)
+    # Attempt to withdraw 670 (greater than balance)
+    result = my_account.withdraw(670)
     
     # Display the balance and withdrawal result
     my_account.display_balance()  # This will display the balance
-    print(f"Final Balance: {my_account.balance}")
     print(f"Withdrawal Result: {result}")
