@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 numerator = float(input("Enter the numerator: "))
-denominaror = float(input("Enter the denominator: "))
+denominator = float(input("Enter the denominator: "))
 
 def safe_divide(numerator, denominator):
     try:
@@ -20,6 +20,6 @@ def safe_divide(numerator, denominator):
 if __name__ == "__main__":
         #num1 = float(input("Enter the numerator: "))
         #num2 = float(input("Enter the denominator: "))
-        result = safe_divide(numerator, denominaror)
+        result = safe_divide(numerator, denominator)
         if result is not None:
-            print(f"The result is: {result}")
+            print(f"The result is: {result}")   
