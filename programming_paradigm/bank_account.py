@@ -10,7 +10,7 @@ class BankAccount:
         """
         print(f"Current Balance: {self.balance}")
         
-    def balance(self, amount):
+    def check_balance(self, amount):
         """
         Check if the withdrawal amount is less than or equal to the current balance and print the result.
         """
@@ -30,7 +30,7 @@ class BankAccount:
         """
         Withdraw a specified amount from the account if sufficient funds exist.
         """
-        self.balance(amount)  # Check balance before withdrawal
+        self.check_balance(amount)  # Check balance before withdrawal
         if amount > self.balance:
             return "Insufficient funds"
         self.balance -= amount
