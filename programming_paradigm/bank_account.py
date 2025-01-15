@@ -12,12 +12,9 @@ class BankAccount:
         
     def check_balance(self, amount):
         """
-        Check if the withdrawal amount is less than or equal to the current balance and print the result.
+        Check if the withdrawal amount is less than or equal to the current balance.
         """
-        if amount <= self.balance:
-            print(True)
-        else:
-            print(False)
+        return amount <= self.balance
         
     def deposit(self, amount):
         """
@@ -30,11 +27,10 @@ class BankAccount:
         """
         Withdraw a specified amount from the account if sufficient funds exist.
         """
-        self.check_balance(amount)  # Check balance before withdrawal
-        if amount > self.balance:
+        if not self.check_balance(amount):
             return "Insufficient funds"
         self.balance -= amount
-        return self.balance
+        return f"Withdrew: ${amount:.2f}"
     
 if __name__ == "__main__":
     # Create an account with an initial balance of 1000
@@ -43,8 +39,8 @@ if __name__ == "__main__":
     # Deposit 0 into the account
     my_account.deposit(0)
     
-    # Attempt to withdraw 550
-    result = my_account.withdraw(550)
+    # Attempt to withdraw 50
+    result = my_account.withdraw(50)
     
     # Display the balance and withdrawal result
     my_account.display_balance()  # This will display the balance
