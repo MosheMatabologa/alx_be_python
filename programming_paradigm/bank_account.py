@@ -4,6 +4,12 @@ class BankAccount:
     def __init__(self, initial_balance=0):    
         self.balance = initial_balance
         
+    def display_balance(self):
+        """
+        Display the current balance of the account.
+        """
+        print(f"Current Balance: {self.balance}")
+        
     def balance(self, amount):
         """
         Check if the withdrawal amount is less than or equal to the current balance and print the result.
@@ -40,7 +46,7 @@ if __name__ == "__main__":
     # Attempt to withdraw 550
     result = my_account.withdraw(550)
     
-    # Print the final balance and withdrawal result
-    print('Current Balance: ', my_account.balance)
+    # Display the balance and withdrawal result
+    my_account.display_balance()  # This will display the balance
     print(f"Final Balance: {my_account.balance}")
     print(f"Withdrawal Result: {result}")
