@@ -3,6 +3,9 @@
 numerator = float(input("Enter the numerator: "))
 denominator = float(input("Enter the denominator: "))
 
+float(numerator)
+float(denominator)
+
 def safe_divide(numerator, denominator):
     try:
         return numerator / denominator
@@ -22,4 +25,4 @@ if __name__ == "__main__":
         #num2 = float(input("Enter the denominator: "))
         result = safe_divide(numerator, denominator)
         if result is not None:
-            print(f"The result is: {result}")   
+            print(f"The result is: {result}")
