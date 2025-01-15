@@ -11,8 +11,8 @@ class BankAccount:
         if amount > self.balance:
             return "Insufficient funds"
         self.balance -= amount
-        return f"Withdrew: ${amount:.2f}"
+        return f"Withdrew: ${amount:.2f}"  # Ensures two decimal places
     
     def display_balance(self):
         """Display the current balance of the account."""
-        print(f"Current Balance: ${self.balance}")
+        print(f"Current Balance: ${self.balance:.2f}")  # Ensures two decimal places
