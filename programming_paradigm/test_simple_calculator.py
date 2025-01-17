@@ -9,6 +9,9 @@ class SimpleCalculatorTest(unittest.TestCase):
         self.calculator = SimpleCalculator()
 
     # Addition tests
+    def test addition(self):
+        self.assertEqual(self.calculator.add(2, 2), 4)
+    
     def test_add_positive(self):
         self.assertEqual(self.calculator.add(2, 2), 4)
 
@@ -19,6 +22,10 @@ class SimpleCalculatorTest(unittest.TestCase):
         self.assertEqual(self.calculator.add(0, 0), 0)
 
     # Subtraction tests
+     def test subtraction(self):
+        self.assertEqual(self.calculator.subtract(2, 2), 0)
+        
+        
     def test_subtract_positive(self):
         self.assertEqual(self.calculator.subtract(2, 2), 0)
 
@@ -26,6 +33,9 @@ class SimpleCalculatorTest(unittest.TestCase):
         self.assertEqual(self.calculator.subtract(-2, -2), 0)
 
     # Multiplication tests
+    def test multiplication(self):  
+        self.assertEqual(self.calculator.multiply(2, 2), 4)
+    
     def test_multiplication_positive(self):
         self.assertEqual(self.calculator.multiply(2, 2), 4)
 
@@ -39,6 +49,9 @@ class SimpleCalculatorTest(unittest.TestCase):
         self.assertEqual(self.calculator.multiply(0, 2), 0)
 
     # Division tests
+    def test division(self):
+        self.assertEqual(self.calculator.divide(2, 2), 1)
+    
     def test_division_positive(self):
         self.assertEqual(self.calculator.divide(2, 2), 1)
 
@@ -54,3 +67,5 @@ class SimpleCalculatorTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+    
